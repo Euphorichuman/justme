@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/justme/static/css/main.5c358eb2.css",
-    "main.js": "/justme/static/js/main.009b1963.js",
-    "static/media/MADE-Outer-Sans-Outline-Bold.otf": "/justme/static/media/MADE-Outer-Sans-Outline-Bold.794167af5905485dbc3d.otf",
-    "static/media/MADE-Outer-Sans-Bold.otf": "/justme/static/media/MADE-Outer-Sans-Bold.58a38b29014f3a369042.otf",
-    "static/media/MADE-Outer-Sans-Regular.otf": "/justme/static/media/MADE-Outer-Sans-Regular.40662520491a903f652e.otf",
-    "static/media/MADE-Outer-Sans-Light.otf": "/justme/static/media/MADE-Outer-Sans-Light.b5f49917ada27a87ae91.otf",
-    "static/media/star.svg": "/justme/static/media/star.ca84d9a12d98637a812dc5943175c089.svg",
-    "index.html": "/justme/index.html",
-    "static/media/flower.svg": "/justme/static/media/flower.e0eae4fc433af7434e2752597bd3e2b0.svg",
-    "main.5c358eb2.css.map": "/justme/static/css/main.5c358eb2.css.map",
-    "main.009b1963.js.map": "/justme/static/js/main.009b1963.js.map"
+    "main.css": "/euphorichuman.co/static/css/main.aaffc7ef.css",
+    "main.js": "/euphorichuman.co/static/js/main.de2e0677.js",
+    "static/media/MADE-Outer-Sans-Outline-Bold.otf": "/euphorichuman.co/static/media/MADE-Outer-Sans-Outline-Bold.794167af5905485dbc3d.otf",
+    "static/media/MADE-Outer-Sans-Bold.otf": "/euphorichuman.co/static/media/MADE-Outer-Sans-Bold.58a38b29014f3a369042.otf",
+    "static/media/MADE-Outer-Sans-Regular.otf": "/euphorichuman.co/static/media/MADE-Outer-Sans-Regular.40662520491a903f652e.otf",
+    "static/media/MADE-Outer-Sans-Light.otf": "/euphorichuman.co/static/media/MADE-Outer-Sans-Light.b5f49917ada27a87ae91.otf",
+    "static/media/star.svg": "/euphorichuman.co/static/media/star.ca84d9a12d98637a812dc5943175c089.svg",
+    "index.html": "/euphorichuman.co/index.html",
+    "static/media/flower.svg": "/euphorichuman.co/static/media/flower.e0eae4fc433af7434e2752597bd3e2b0.svg",
+    "main.aaffc7ef.css.map": "/euphorichuman.co/static/css/main.aaffc7ef.css.map",
+    "main.de2e0677.js.map": "/euphorichuman.co/static/js/main.de2e0677.js.map"
   },
   "entrypoints": [
-    "static/css/main.5c358eb2.css",
-    "static/js/main.009b1963.js"
+    "static/css/main.aaffc7ef.css",
+    "static/js/main.de2e0677.js"
   ]
 }
