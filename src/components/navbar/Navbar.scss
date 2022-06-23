@@ -1,0 +1,27 @@
+$primary-color: #FF5933;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+
+  .navbar__title {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar__options {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+
+    .navbar__option {
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
