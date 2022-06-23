@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useRef } from "react";
 import { Contact } from "pages/contact/Contact";
 import { Navbar } from "components/navbar/Navbar";
 import { Footer } from "components/footer/Footer";
@@ -7,10 +7,20 @@ import "./Home.scss";
 import { ReactComponent as StarSvg } from "assets/shapes/star.svg";
 
 export default function Home() {
+  const contactRef = useRef<null | HTMLDivElement>(null); 
+
+  const scrollToContact = () => {
+    contactRef.current!.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+
   return (
     <Fragment>
-      <Navbar />
-      <section className="home">
+      <Navbar contactAction={scrollToContact}/>
+      <section className="home" 
+      onClick={scrollToContact}>
         <div className="home__large-text">
           <span className="row">
             <span className="fake-btn normal-text">
@@ -32,7 +42,7 @@ export default function Home() {
           <StarSvg />
         </div>
       </section>
-      <Contact />
+      <Contact refProp={contactRef} />
       <Footer />
     </Fragment>
   );

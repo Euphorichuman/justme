@@ -3,9 +3,13 @@ import "./Contact.scss";
 
 import { ReactComponent as FlowerSvg } from "assets/shapes/flower.svg";
 
-export function Contact() {
+interface IProps {
+  refProp: React.RefObject<HTMLDivElement | null>;
+}
+
+export function Contact({ refProp }: IProps) {
   return (
-    <div className="contact">
+    <div className="contact" ref={refProp as React.RefObject<HTMLDivElement>}>
       <a
         className="contact__email"
         href="mailto:fuentes.acosta.martin@gmail.com?subject = Contact&body = Message"

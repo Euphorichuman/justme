@@ -1,14 +1,25 @@
 import React from "react";
 import "./Navbar.scss";
 
-export function Navbar() {
+interface IProps {
+  contactAction: () => void;
+}
+
+export function Navbar({ contactAction }: IProps) {
+
+  const notAvailable = () => {
+    alert("This feature is not available yet");
+  }
+
   return (
     <nav className="navbar">
       <div className="navbar__title">Euphorichuman</div>
       <div className="navbar__options">
-        <div className="navbar__option">About</div>
-        <div className="navbar__option">Projects</div>
-        <div className="navbar__option">Contact</div>
+        <div className="navbar__option" onClick={notAvailable}>About</div>
+        <div className="navbar__option" onClick={notAvailable}>Projects</div>
+        <div className="navbar__option" onClick={contactAction}>
+          Contact
+        </div>
       </div>
       <div className="navbar__actions">
         <a
