@@ -11,7 +11,12 @@ export function Navbar() {
         <div className="navbar__option">Contact</div>
       </div>
       <div className="navbar__actions">
-        <button className="outline-btn">GET IN TOUCH</button>
+        <a
+          className="outline-btn"
+          href="mailto:fuentes.acosta.martin@gmail.com?subject = Contact&body = Message"
+        >
+          GET IN TOUCH
+        </a>
       </div>
     </nav>
   );

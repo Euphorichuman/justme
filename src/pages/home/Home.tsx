@@ -1,8 +1,10 @@
 import React, { Fragment } from "react";
+import { Contact } from "pages/contact/Contact";
 import { Navbar } from "components/navbar/Navbar";
+import { Footer } from "components/footer/Footer";
 import "./Home.scss";
 
-import { ReactComponent as StarSvg } from "../../../src/assets/shapes/star.svg";
+import { ReactComponent as StarSvg } from "assets/shapes/star.svg";
 
 export default function Home() {
   return (
@@ -30,6 +32,8 @@ export default function Home() {
           <StarSvg />
         </div>
       </section>
+      <Contact />
+      <Footer />
     </Fragment>
   );
 }
