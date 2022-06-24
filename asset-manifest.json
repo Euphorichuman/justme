@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.4f0ecaae.css",
-    "main.js": "/static/js/main.3babbc3c.js",
+    "main.css": "/static/css/main.adb488f6.css",
+    "main.js": "/static/js/main.4b92ca94.js",
     "static/media/MADE-Outer-Sans-Outline-Bold.otf": "/static/media/MADE-Outer-Sans-Outline-Bold.794167af5905485dbc3d.otf",
     "static/media/MADE-Outer-Sans-Bold.otf": "/static/media/MADE-Outer-Sans-Bold.58a38b29014f3a369042.otf",
     "static/media/MADE-Outer-Sans-Regular.otf": "/static/media/MADE-Outer-Sans-Regular.40662520491a903f652e.otf",
     "static/media/MADE-Outer-Sans-Light.otf": "/static/media/MADE-Outer-Sans-Light.b5f49917ada27a87ae91.otf",
+    "static/media/path-text.svg": "/static/media/path-text.98545ac1d485aa5254ada09e7469df2e.svg",
     "static/media/star.svg": "/static/media/star.ca84d9a12d98637a812dc5943175c089.svg",
     "index.html": "/index.html",
     "static/media/flower.svg": "/static/media/flower.e0eae4fc433af7434e2752597bd3e2b0.svg",
-    "main.4f0ecaae.css.map": "/static/css/main.4f0ecaae.css.map",
-    "main.3babbc3c.js.map": "/static/js/main.3babbc3c.js.map"
+    "main.adb488f6.css.map": "/static/css/main.adb488f6.css.map",
+    "main.4b92ca94.js.map": "/static/js/main.4b92ca94.js.map"
   },
   "entrypoints": [
-    "static/css/main.4f0ecaae.css",
-    "static/js/main.3babbc3c.js"
+    "static/css/main.adb488f6.css",
+    "static/js/main.4b92ca94.js"
   ]
 }
