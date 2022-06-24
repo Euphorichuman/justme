@@ -2,7 +2,7 @@ import React from "react";
 import "./Navbar.scss";
 
 interface IProps {
-  contactAction: () => void;
+  contactAction: (el: string) => void;
 }
 
 export function Navbar({ contactAction }: IProps) {
@@ -15,9 +15,9 @@ export function Navbar({ contactAction }: IProps) {
     <nav className="navbar">
       <div className="navbar__title">Euphorichuman</div>
       <div className="navbar__options">
-        <div className="navbar__option" onClick={notAvailable}>About</div>
+        <div className="navbar__option" onClick={() => contactAction('about')}>About</div>
         <div className="navbar__option" onClick={notAvailable}>Projects</div>
-        <div className="navbar__option" onClick={contactAction}>
+        <div className="navbar__option" onClick={() => contactAction('contact')}>
           Contact
         </div>
       </div>
