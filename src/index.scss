@@ -1,5 +1,5 @@
 $black-color: #050505;
-$primary-color: #FF5933;
+$primary-color: #ff5933;
 
 @font-face {
   font-family: "MADE Outer Sans";
@@ -53,7 +53,6 @@ code {
 }
 
 // Common styles
-
 .outline-btn {
   all: unset;
   cursor: pointer;
@@ -73,6 +72,27 @@ code {
   }
 }
 
+a {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto;
+
+  &:visited {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+  }
+}
+
+.hover-primary-color {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
 .text-primary {
   color: $primary-color;
 }
@@ -88,19 +108,19 @@ code {
 }
 
 // Custom scrollbar
-/* width */
+/* size */
 ::-webkit-scrollbar {
   width: 5px;
   height: 5px;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: grey; 
+  background: grey;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: $primary-color; 
+  background: $primary-color;
 }
