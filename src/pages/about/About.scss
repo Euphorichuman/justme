@@ -2,6 +2,8 @@ $primary-color: #ff5933;
 
 .about {
   display: flex;
+  flex-direction: column;
+  gap: 6rem;
   justify-content: center;
   width: 100%;
   margin-top: 6rem;
