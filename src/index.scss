@@ -41,7 +41,9 @@ body {
   color: white;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -104,6 +106,14 @@ a {
 
 .text-outline {
   font-family: "MADE Outer Outline Sans", sans-serif;
+}
+
+.text-2xl {
+  font-size: 2rem;
+}
+
+.text-xs {
+  font-size: 0.5rem;
 }
 
 .row {
