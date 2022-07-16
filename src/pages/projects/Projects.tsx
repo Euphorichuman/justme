@@ -1,7 +1,24 @@
-import React from 'react'
+import React from "react";
+import { CardCarousel } from "components/card-carousel/CardCarousel";
 
-export function Projects() {
+import "./Projects.scss";
+
+interface IProps {
+  refProp: React.RefObject<HTMLDivElement | null>;
+}
+
+export function Projects({ refProp }: IProps) {
   return (
-    <div>Projects</div>
-  )
+    <section
+      className="projects"
+      ref={refProp as React.RefObject<HTMLDivElement>}
+    >
+      <div className="projects__wrapper">
+        <div className="projects__title">WANNA SEE SOME OF MY WORK?</div>
+        <div className="projects__content">
+          <CardCarousel />
+        </div>
+      </div>
+    </section>
+  );
 }

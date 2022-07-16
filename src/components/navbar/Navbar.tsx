@@ -6,18 +6,26 @@ interface IProps {
 }
 
 export function Navbar({ scrollToSectionAction }: IProps) {
-
-  const notAvailable = () => {
-    alert("This feature is not available yet");
-  }
-
   return (
     <nav className="navbar">
       <div className="navbar__title">Euphorichuman</div>
       <div className="navbar__options">
-        <div className="navbar__option hover-primary-color" onClick={() => scrollToSectionAction('about')}>About</div>
-        <div className="navbar__option hover-primary-color" onClick={notAvailable}>Projects</div>
-        <div className="navbar__option hover-primary-color" onClick={() => scrollToSectionAction('contact')}>
+        <div
+          className="navbar__option hover-primary-color"
+          onClick={() => scrollToSectionAction("about")}
+        >
+          About
+        </div>
+        <div
+          className="navbar__option hover-primary-color"
+          onClick={() => scrollToSectionAction("projects")}
+        >
+          Projects
+        </div>
+        <div
+          className="navbar__option hover-primary-color"
+          onClick={() => scrollToSectionAction("contact")}
+        >
           Contact
         </div>
       </div>

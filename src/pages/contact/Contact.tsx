@@ -1,4 +1,5 @@
 import React from "react";
+import { PathCircleText } from "components/path-circle-text/PathCircleText";
 import "./Contact.scss";
 
 import { ReactComponent as FlowerSvg } from "assets/shapes/flower.svg";

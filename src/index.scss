@@ -47,6 +47,14 @@ body {
   box-sizing: inherit;
 }
 
+::-moz-selection { /* Code for Firefox */
+  background: $gray-color;
+}
+
+::selection {
+  background: $gray-color;
+}
+
 body {
   background-color: $black-color;
   -webkit-font-smoothing: antialiased;
@@ -66,7 +74,7 @@ code {
   border: 2px solid $primary-color;
   border-radius: 2rem;
   padding: 0.5rem 2rem;
-  color: white;
+  color: $primary-color;
   transition: all 0.2s ease-in-out;
 
   &:hover {
@@ -82,7 +90,7 @@ code {
 a {
   text-decoration: inherit;
   color: inherit;
-  cursor: auto;
+  cursor: pointer;
 
   &:visited {
     text-decoration: inherit;
