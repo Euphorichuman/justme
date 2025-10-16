@@ -4,15 +4,7 @@ import svgr from "vite-plugin-svgr";
 import path from "path";
 
 export default defineConfig({
-  plugins: [
-    svgr({
-      svgrOptions: {
-        icon: true,
-      },
-      include: "**/*.svg",
-    }),
-    react(),
-  ],
+  plugins: [svgr(), react()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

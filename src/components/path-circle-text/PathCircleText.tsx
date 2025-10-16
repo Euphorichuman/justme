@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import "./PathCircleText.scss";
 
-// import PathTextIcon from "@/assets/shapes/path-text.svg?react";
+import PathTextIcon from "assets/shapes/path-text.svg?react";
 
 export function PathCircleText() {
   const svgRef = useRef<SVGSVGElement>(null);
@@ -19,8 +19,7 @@ export function PathCircleText() {
 
   return (
     <div className="path-circle-text">
-      {/* <PathTextIcon ref={svgRef} /> */}
-      <div>PathTextIcon</div>
+      <PathTextIcon ref={svgRef} />
     </div>
   );
 }
