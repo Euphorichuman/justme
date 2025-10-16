@@ -1,0 +1,106 @@
+$black-color: #050505;
+$primary-color: #FF5933;
+
+@font-face {
+  font-family: "MADE Outer Sans";
+  src: url("../public/fonts/MADE-Outer-Sans-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MADE Outer Sans";
+  src: url("../public/fonts/MADE-Outer-Sans-Light.otf") format("opentype");
+  font-weight: light;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MADE Outer Sans";
+  src: url("../public/fonts/MADE-Outer-Sans-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MADE Outer Outline Sans";
+  src: url("../public/fonts/MADE-Outer-Sans-Outline-Bold.otf")
+    format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "MADE Outer Sans", sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+  background-color: $black-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 1.5rem 6rem;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+// Common styles
+
+.outline-btn {
+  all: unset;
+  cursor: pointer;
+  border: 2px solid $primary-color;
+  border-radius: 2rem;
+  padding: 0.5rem 2rem;
+  color: white;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: $primary-color;
+    color: white;
+  }
+
+  &:active {
+    filter: brightness(1.25);
+  }
+}
+
+.text-primary {
+  color: $primary-color;
+}
+
+.text-outline {
+  font-family: "MADE Outer Outline Sans", sans-serif;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+// Custom scrollbar
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: grey; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $primary-color; 
+}

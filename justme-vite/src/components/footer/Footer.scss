@@ -1,0 +1,11 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6rem;
+
+  .footer__copyright {
+    font-size: 0.8rem;
+    font-weight: 300;
+    align-self: flex-end;
+  }
+}

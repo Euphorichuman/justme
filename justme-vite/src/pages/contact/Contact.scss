@@ -1,0 +1,51 @@
+$black-color: #050505;
+$primary-color: #FF5933;
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 14rem;
+  position: relative;
+
+  .contact__email {
+    all: unset;
+    cursor: pointer;
+    font-size: 1.5rem;
+
+    span {
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:hover > span {
+      color: $primary-color;
+    }
+  }
+
+  .contact__social-medias {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    a {
+      all: unset;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .contact__shape {
+    width: 6rem;
+    height: 6rem;
+    
+  }
+
+  .contact__shape-1 {
+    position: absolute;
+    left: 0;
+    bottom: -3.8rem;
+  }
+}
