@@ -1,7 +1,8 @@
 import React from "react";
+// import { PathCircleText } from "components/path-circle-text/PathCircleText";
 import "./Contact.scss";
 
-import { ReactComponent as FlowerSvg } from "assets/shapes/flower.svg";
+// import FlowerIcon from "@/assets/shapes/flower.svg";
 
 interface IProps {
   refProp: React.RefObject<HTMLDivElement | null>;
@@ -18,6 +19,7 @@ export function Contact({ refProp }: IProps) {
       </a>
       <div className="contact__social-medias">
         <a
+          className="hover-primary-color"
           href="https://www.linkedin.com/in/martin-fuentes/"
           target="_blank"
           rel="noopener noreferrer"
@@ -25,6 +27,7 @@ export function Contact({ refProp }: IProps) {
           LinkedIn
         </a>
         <a
+          className="hover-primary-color"
           href="https://github.com/Euphorichuman"
           target="_blank"
           rel="noopener noreferrer"
@@ -32,6 +35,7 @@ export function Contact({ refProp }: IProps) {
           Github
         </a>
         <a
+          className="hover-primary-color"
           href="https://www.behance.net/euphorichuman"
           target="_blank"
           rel="noopener noreferrer"
@@ -39,6 +43,7 @@ export function Contact({ refProp }: IProps) {
           Behance
         </a>
         <a
+          className="hover-primary-color"
           href="https://www.instagram.com/euphorichuman/"
           target="_blank"
           rel="noopener noreferrer"
@@ -48,7 +53,8 @@ export function Contact({ refProp }: IProps) {
       </div>
 
       <div className="contact__shape contact__shape-1">
-        <FlowerSvg />
+        {/* <FlowerIcon /> */}
+        <div>FlowerIcon</div>
       </div>
     </div>
   );
