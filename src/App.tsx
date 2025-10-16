@@ -1,4 +1,4 @@
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/react";
 import { Fragment, useRef } from "react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Home } from "pages/home/Home";
