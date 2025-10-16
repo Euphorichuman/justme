@@ -1,27 +1,13 @@
-/// <reference types="vite-plugin-svgr/client" />
-import { Fragment, useRef } from "react";
-import { Contact } from "pages/contact/Contact";
-import { Navbar } from "components/navbar/Navbar";
-import { Footer } from "components/footer/Footer";
+import React from "react";
+
 import "./Home.scss";
 
-// import StarIcon from 'assets/shapes/star.svg?react';
+import StarIcon from "@/assets/shapes/star.svg?react";
 
-export default function Home() {
-  const contactRef = useRef<null | HTMLDivElement>(null); 
-
-  const scrollToContact = () => {
-    contactRef.current!.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  }
-
+export function Home() {
   return (
-    <Fragment>
-      <Navbar contactAction={scrollToContact}/>
-      <section className="home" 
-      onClick={scrollToContact}>
+    <section className="home">
+      <div className="home__content">
         <div className="home__large-text">
           <span className="row">
             <span className="fake-btn normal-text">
@@ -37,16 +23,12 @@ export default function Home() {
         </div>
 
         <div className="home__shape home__shape-1">
-          <div>Star</div>
-          {/* <StarIcon /> */}
+          <StarIcon />
         </div>
         <div className="home__shape home__shape-2">
-          <div>Star</div>
-          {/* <StarIcon /> */}
+          <StarIcon />
         </div>
-      </section>
-      <Contact refProp={contactRef} />
-      <Footer />
-    </Fragment>
+      </div>
+    </section>
   );
 }

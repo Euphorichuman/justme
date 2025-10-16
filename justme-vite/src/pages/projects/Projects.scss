@@ -1,0 +1,24 @@
+$gray-color: #3f3f3f;
+$primary-color: #ff5933;
+
+.projects {
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+  position: relative;
+
+  .projects__wrapper {
+
+    .projects__title {
+      font-size: 5rem;
+      font-weight: bold;
+      color: $primary-color;
+    }
+
+    .projects__content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+}

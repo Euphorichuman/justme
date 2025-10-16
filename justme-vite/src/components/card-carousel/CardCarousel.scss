@@ -1,0 +1,25 @@
+$gray-color: #3f3f3f;
+$primary-color: #ff5933;
+
+.card-carousel {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  overflow-x: hidden;
+
+  .card-carousel__controls {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .card-carousel__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+}
+
+.disabled-btn {
+  pointer-events: none;
+  opacity: 0.5;
+}
