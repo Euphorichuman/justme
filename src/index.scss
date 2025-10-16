@@ -1,24 +1,25 @@
 $black-color: #050505;
-$primary-color: #FF5933;
+$gray-color: #3f3f3f;
+$primary-color: #ff5933;
 
 @font-face {
   font-family: "MADE Outer Sans";
   src: url("../public/fonts/MADE-Outer-Sans-Bold.otf") format("opentype");
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "MADE Outer Sans";
   src: url("../public/fonts/MADE-Outer-Sans-Light.otf") format("opentype");
-  font-weight: light;
+  font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "MADE Outer Sans";
   src: url("../public/fonts/MADE-Outer-Sans-Regular.otf") format("opentype");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -26,7 +27,7 @@ $primary-color: #FF5933;
   font-family: "MADE Outer Outline Sans";
   src: url("../public/fonts/MADE-Outer-Sans-Outline-Bold.otf")
     format("opentype");
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -38,6 +39,21 @@ body {
   font-size: 16px;
   box-sizing: border-box;
   color: white;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  background: $gray-color;
+}
+
+::selection {
+  background: $gray-color;
 }
 
 body {
@@ -53,14 +69,13 @@ code {
 }
 
 // Common styles
-
 .outline-btn {
   all: unset;
   cursor: pointer;
   border: 2px solid $primary-color;
   border-radius: 2rem;
   padding: 0.5rem 2rem;
-  color: white;
+  color: $primary-color;
   transition: all 0.2s ease-in-out;
 
   &:hover {
@@ -73,6 +88,27 @@ code {
   }
 }
 
+a {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: pointer;
+
+  &:visited {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+  }
+}
+
+.hover-primary-color {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
 .text-primary {
   color: $primary-color;
 }
@@ -81,26 +117,49 @@ code {
   font-family: "MADE Outer Outline Sans", sans-serif;
 }
 
+.text-2xl {
+  font-size: 2rem;
+}
+
+.text-xs {
+  font-size: 0.5rem;
+}
+
 .row {
   display: flex;
   flex-direction: row;
   gap: 2rem;
 }
 
+hr.gray-line {
+  width: 100%;
+  border: 1px solid $gray-color;
+}
+
 // Custom scrollbar
-/* width */
+/* size */
 ::-webkit-scrollbar {
   width: 5px;
   height: 5px;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: grey; 
+  background: $gray-color;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: $primary-color; 
+  background: $primary-color;
+}
+
+// Animation for line-trough
+@keyframes strike {
+  from {
+    text-decoration-color: transparent;
+  }
+  to {
+    text-decoration-color: currentColor;
+  }
 }

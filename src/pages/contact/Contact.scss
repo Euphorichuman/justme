@@ -1,10 +1,10 @@
 $black-color: #050505;
-$primary-color: #FF5933;
+$primary-color: #ff5933;
 
 .contact {
   display: flex;
   justify-content: space-between;
-  margin-top: 14rem;
+  margin-top: 12rem;
   position: relative;
 
   .contact__email {
@@ -25,27 +25,26 @@ $primary-color: #FF5933;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-
-    a {
-      all: unset;
-      cursor: pointer;
-      transition: all 0.2s ease-in-out;
-
-      &:hover {
-        color: $primary-color;
-      }
-    }
   }
 
   .contact__shape {
     width: 6rem;
     height: 6rem;
-    
+    animation: rotate 3s linear infinite;
   }
 
   .contact__shape-1 {
     position: absolute;
     left: 0;
     bottom: -3.8rem;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

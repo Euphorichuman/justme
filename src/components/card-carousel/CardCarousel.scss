@@ -1,0 +1,80 @@
+$gray-color: #3f3f3f;
+$primary-color: #ff5933;
+
+.card-carousel {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  overflow: hidden;
+
+  .card-carousel__controls {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .card-carousel__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  // Out animations
+  .slide-out-left {
+    animation: slideOutLeft 0.3s ease-in forwards;
+  }
+
+  .slide-out-right {
+    animation: slideOutRight 0.3s ease-in forwards;
+  }
+
+  // In animation with bounce effect
+  .slide-in-left {
+    animation: slideInLeft 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  }
+
+  .slide-in-right {
+    animation: slideInRight 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  }
+}
+
+.disabled-btn {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+// Animations
+@keyframes slideOutLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100px);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(100px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(-100px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

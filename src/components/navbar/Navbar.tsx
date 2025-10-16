@@ -1,23 +1,30 @@
-import React from "react";
 import "./Navbar.scss";
 
 interface IProps {
-  contactAction: () => void;
+  scrollToSectionAction: (el: string) => void;
 }
 
-export function Navbar({ contactAction }: IProps) {
-
-  const notAvailable = () => {
-    alert("This feature is not available yet");
-  }
-
+export function Navbar({ scrollToSectionAction }: IProps) {
   return (
     <nav className="navbar">
       <div className="navbar__title">Euphorichuman</div>
       <div className="navbar__options">
-        <div className="navbar__option" onClick={notAvailable}>About</div>
-        <div className="navbar__option" onClick={notAvailable}>Projects</div>
-        <div className="navbar__option" onClick={contactAction}>
+        <div
+          className="navbar__option hover-primary-color"
+          onClick={() => scrollToSectionAction("about")}
+        >
+          About
+        </div>
+        <div
+          className="navbar__option hover-primary-color"
+          onClick={() => scrollToSectionAction("projects")}
+        >
+          Projects
+        </div>
+        <div
+          className="navbar__option hover-primary-color"
+          onClick={() => scrollToSectionAction("contact")}
+        >
           Contact
         </div>
       </div>

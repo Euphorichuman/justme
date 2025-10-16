@@ -1,0 +1,40 @@
+$primary-color: #ff5933;
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  align-items: center;
+  width: 100%;
+  margin-top: 6rem;
+  
+  .about__content-wrapper {
+    display: flex;
+    gap: 2rem;
+    width: fit-content;
+
+    .about__content {
+      display: flex;
+      flex-direction: column;
+
+      .about__title {
+        align-self: flex-end;
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: $primary-color;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          text-decoration: line-through;
+          animation: strike 0.2s ease-in-out;
+        }
+      }
+
+      .about__text {
+        max-width: 84rem;
+      }
+    }
+  }
+}

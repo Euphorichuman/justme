@@ -1,0 +1,47 @@
+$gray-color: #3f3f3f;
+$primary-color: #ff5933;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 20rem;
+
+  .card__image {
+    width: 100%;
+    height: 16rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: gray;
+      cursor: url("/favicon.ico"), auto;
+      -webkit-filter: grayscale(1);
+      filter: grayscale(1);
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        filter: none;
+        cursor: url("/favicon.ico"), pointer;
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0);
+      }
+    }
+  }
+
+  .card__content {
+    .card__title {
+      color: $primary-color;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+    }
+
+    .card__action {
+      font-size: 0.7rem;
+      color: $gray-color;
+    }
+  }
+}
