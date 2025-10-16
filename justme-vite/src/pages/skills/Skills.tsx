@@ -20,7 +20,6 @@ export function Skills() {
   const skillsDesign = [
     "Adobe Photoshop",
     "Adobe Illustrator",
-    "Adobe XD",
     "Figma"
   ];
 
