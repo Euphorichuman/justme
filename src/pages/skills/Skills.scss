@@ -7,6 +7,13 @@ $primary-color: #ff5933;
     font-weight: bold;
     color: $primary-color;
     margin-bottom: 2rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      text-decoration: line-through;
+      animation: strike 0.2s ease-in-out;
+    }
   }
 
   .skills__content {
@@ -47,7 +54,7 @@ $primary-color: #ff5933;
           .list__item__text {
             width: max-content;
             cursor: pointer;
-          } 
+          }
         }
       }
     }

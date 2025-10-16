@@ -9,14 +9,14 @@ export function Home() {
         <div className="home__large-text">
           <span className="row">
             <span className="fake-btn normal-text">
-              Hi, my name is Martin Fuentes, I'm
+              Hi, my name is <span className="name">MARTIN FUENTES</span>, I'm
             </span>
             <span className="text-primary">FULL-STACK</span>
           </span>
           WEB DEVELOPER, AND
           <br />
           <span className="text-primary">
-            <span className="text-outline">DDDDD</span>ESIGNER
+            <span className="text-outline">DDDDDD</span>ESIGNER
           </span>
         </div>
 

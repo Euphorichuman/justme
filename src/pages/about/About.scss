@@ -30,15 +30,6 @@ $primary-color: #ff5933;
           text-decoration: line-through;
           animation: strike 0.2s ease-in-out;
         }
-
-        @keyframes strike {
-          from {
-            text-decoration-color: transparent;
-          }
-          to {
-            text-decoration-color: auto;
-          }
-        }
       }
 
       .about__text {

@@ -18,12 +18,14 @@ $primary-color: #ff5933;
       height: 100%;
       object-fit: cover;
       filter: gray;
+      cursor: url("/favicon.ico"), auto;
       -webkit-filter: grayscale(1);
       filter: grayscale(1);
       transition: all 0.2s ease-in-out;
 
       &:hover {
         filter: none;
+        cursor: url("/favicon.ico"), pointer;
         -webkit-filter: grayscale(0);
         filter: grayscale(0);
       }

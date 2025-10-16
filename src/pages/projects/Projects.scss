@@ -8,11 +8,21 @@ $primary-color: #ff5933;
   position: relative;
 
   .projects__wrapper {
-
     .projects__title {
       font-size: 5rem;
       font-weight: bold;
       color: $primary-color;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      .work {
+        margin-left: 0.3rem;
+      }
+
+      &:hover .work {
+        text-decoration: line-through;
+        animation: strike 0.2s ease-in-out;
+      }
     }
 
     .projects__content {

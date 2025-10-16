@@ -47,7 +47,8 @@ body {
   box-sizing: inherit;
 }
 
-::-moz-selection { /* Code for Firefox */
+::-moz-selection {
+  /* Code for Firefox */
   background: $gray-color;
 }
 
@@ -153,3 +154,12 @@ hr.gray-line {
   background: $primary-color;
 }
 
+// Animation for line-trough
+@keyframes strike {
+  from {
+    text-decoration-color: transparent;
+  }
+  to {
+    text-decoration-color: currentColor;
+  }
+}
