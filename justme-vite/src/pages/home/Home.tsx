@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Home.scss";
 
-import StarIcon from "@/assets/shapes/star.svg?react";
+// import StarIcon from "@/assets/shapes/star.svg?react";
 
 export function Home() {
   return (
@@ -23,10 +23,12 @@ export function Home() {
         </div>
 
         <div className="home__shape home__shape-1">
-          <StarIcon />
+          {/* <StarIcon /> */}
+          <div>StarIcon</div>
         </div>
         <div className="home__shape home__shape-2">
-          <StarIcon />
+          {/* <StarIcon /> */}
+          <div>StarIcon</div>
         </div>
       </div>
     </section>

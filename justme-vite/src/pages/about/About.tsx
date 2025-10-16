@@ -15,15 +15,13 @@ export function About({ refProp }: IProps) {
         <div className="about__content">
           <div className="about__title">About</div>
           <div className="about__text">
-            Computer and systems engineering student. With great skills in
-            software development tools and programming languages such as .NET
-            (with c#), Java, Python; web development: Typescript (with Angular),
-            Javascript (with React), Html, CSS (and SASS). I have worked in
-            various development teams (as lead and developer) solving problems
-            and supporting various processes in the areas of technology as web
-            development and mathematical systems, and proposing solutions to
-            solve small and large scale problems. I also have freelance
-            experience designing brand identities and some general design and UI/UX.
+            Hi! I’m a FULL-STACK developer and computer systems engineer
+            (ABET-accredited), bilingual, and passionate about crafting
+            technology that works beautifully. I love designing too—whether it’s
+            branding, UI/UX, or photography. I enjoy leading teams, solving
+            problems, and building software with tools like .NET (C#), Python,
+            Node.js (NestJS), React, TypeScript, and more. Creativity,
+            responsibility, and ethics guide everything I do.
           </div>
         </div>
       </div>

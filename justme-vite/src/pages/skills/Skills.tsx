@@ -3,21 +3,18 @@ import "./Skills.scss";
 
 export function Skills() {
   const skillsFrontedWebDevelopment = [
-    "Angular",
     "React",
-    "Phoenix",
     "Typescript",
     "Javascript",
     "HTML",
-    "CSS and SASS",
+    "CSS",
   ];
 
   const skillsBackendWebDevelopment = [
-    "Node",
-    "Express",
+    "NodeJs",
+    "NestJs",
     "Python",
     ".NET",
-    "Elixir",
   ];
 
   const skillsDesign = [

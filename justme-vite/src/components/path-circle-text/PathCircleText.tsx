@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import "./PathCircleText.scss";
 
-import PathTextIcon from "@/assets/shapes/path-text.svg?react";
+// import PathTextIcon from "@/assets/shapes/path-text.svg?react";
 
 export function PathCircleText() {
   const svgRef = useRef<SVGSVGElement>(null);
@@ -13,13 +13,14 @@ export function PathCircleText() {
   const handleScroll = () => {
     const svg = svgRef.current;
     if (svg) {
-      svg.style.transform = "rotate(" + window.pageYOffset/2 + "deg)";
+      svg.style.transform = "rotate(" + window.pageYOffset / 2 + "deg)";
     }
   };
 
   return (
     <div className="path-circle-text">
-      <PathTextIcon ref={svgRef} />
+      {/* <PathTextIcon ref={svgRef} /> */}
+      <div>PathTextIcon</div>
     </div>
   );
 }

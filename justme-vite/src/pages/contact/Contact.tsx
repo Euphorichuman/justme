@@ -2,7 +2,7 @@ import React from "react";
 // import { PathCircleText } from "components/path-circle-text/PathCircleText";
 import "./Contact.scss";
 
-import FlowerIcon from "@/assets/shapes/flower.svg";
+// import FlowerIcon from "@/assets/shapes/flower.svg";
 
 interface IProps {
   refProp: React.RefObject<HTMLDivElement | null>;
@@ -53,7 +53,8 @@ export function Contact({ refProp }: IProps) {
       </div>
 
       <div className="contact__shape contact__shape-1">
-        <FlowerIcon />
+        {/* <FlowerIcon /> */}
+        <div>FlowerIcon</div>
       </div>
     </div>
   );
