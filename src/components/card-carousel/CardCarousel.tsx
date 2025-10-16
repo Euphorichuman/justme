@@ -15,6 +15,7 @@ interface IProps {
 export function CardCarousel({ items }: IProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [subItems, setSubItems] = useState(items.slice(0, 4));
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const prevBtn = useRef<HTMLButtonElement>(null);
   const nextBtn = useRef<HTMLButtonElement>(null);
@@ -25,11 +26,15 @@ export function CardCarousel({ items }: IProps) {
   ) => {
     e.preventDefault();
 
+    if (isAnimating) return;
+
     if (currentIndex + action < 0) {
       console.log("Start of list");
     } else if (currentIndex + action > items.length - 1) {
       console.log("End of list");
     } else {
+      setIsAnimating(true);
+
       if (prevBtn.current && nextBtn.current) {
         prevBtn.current.disabled = false;
         prevBtn.current.classList.remove("disabled-btn");
@@ -37,10 +42,27 @@ export function CardCarousel({ items }: IProps) {
         nextBtn.current.classList.remove("disabled-btn");
       }
 
-      setCurrentIndex(currentIndex + action);
-      setSubItems(
-        items.slice(currentIndex + action, currentIndex + action + 4)
+      const container = document.querySelector(".card-carousel__container");
+      container?.classList.add(
+        action > 0 ? "slide-out-left" : "slide-out-right"
       );
+
+      setTimeout(() => {
+        setCurrentIndex(currentIndex + action);
+        setSubItems(
+          items.slice(currentIndex + action, currentIndex + action + 4)
+        );
+
+        container?.classList.remove("slide-out-left", "slide-out-right");
+        container?.classList.add(
+          action > 0 ? "slide-in-right" : "slide-in-left"
+        );
+
+        setTimeout(() => {
+          container?.classList.remove("slide-in-left", "slide-in-right");
+          setIsAnimating(false);
+        }, 400);
+      }, 300);
 
       if (currentIndex + action === items.length - 1) {
         if (nextBtn.current) {

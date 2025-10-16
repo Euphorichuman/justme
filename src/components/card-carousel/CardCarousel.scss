@@ -5,7 +5,7 @@ $primary-color: #ff5933;
   display: flex;
   gap: 2rem;
   align-items: flex-start;
-  overflow-x: hidden;
+  overflow: hidden;
 
   .card-carousel__controls {
     display: flex;
@@ -17,9 +17,64 @@ $primary-color: #ff5933;
     flex-wrap: wrap;
     gap: 2rem;
   }
+
+  // Out animations
+  .slide-out-left {
+    animation: slideOutLeft 0.3s ease-in forwards;
+  }
+
+  .slide-out-right {
+    animation: slideOutRight 0.3s ease-in forwards;
+  }
+
+  // In animation with bounce effect
+  .slide-in-left {
+    animation: slideInLeft 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  }
+
+  .slide-in-right {
+    animation: slideInRight 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  }
 }
 
 .disabled-btn {
   pointer-events: none;
   opacity: 0.5;
+}
+
+// Animations
+@keyframes slideOutLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100px);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(100px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(-100px);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
