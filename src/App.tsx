@@ -1,4 +1,5 @@
 import { Fragment, useRef } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Home } from "pages/home/Home";
 import { About } from "pages/about/About";
 import { Contact } from "pages/contact/Contact";
@@ -10,7 +11,7 @@ export default function App() {
   const aboutRef = useRef<null | HTMLDivElement>(null);
   const projectsRef = useRef<null | HTMLDivElement>(null);
   const contactRef = useRef<null | HTMLDivElement>(null);
-  
+
   const scrollToSection = (el: string) => {
     if (el === "about") {
       aboutRef.current!.scrollIntoView({
@@ -32,7 +33,6 @@ export default function App() {
         block: "start",
       });
     }
-
   };
 
   return (
@@ -40,9 +40,10 @@ export default function App() {
       <Navbar scrollToSectionAction={scrollToSection} />
       <Home />
       <About refProp={aboutRef} />
-      <Projects refProp={projectsRef}/>
+      <Projects refProp={projectsRef} />
       <Contact refProp={contactRef} />
       <Footer />
+      <SpeedInsights />
     </Fragment>
   );
 }
