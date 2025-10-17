@@ -42,6 +42,11 @@ $primary-color: #ff5933;
     .card__action {
       font-size: 0.7rem;
       color: $gray-color;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        color: $primary-color;
+      }
     }
   }
 }

@@ -55,6 +55,11 @@ $primary-color: #ff5933;
             width: max-content;
             cursor: pointer;
           }
+
+          .list__item__text__number {
+            min-width: 1.5rem;
+            text-align: center;
+          }
         }
       }
     }
