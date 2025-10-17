@@ -16,7 +16,11 @@ export function Home() {
           WEB DEVELOPER, AND
           <br />
           <span className="text-primary">
-            <span className="text-outline">DDDDDD</span>ESIGNER
+            <span className="text-outline">
+              <span className="desktop-designer">DDDDDD</span>
+              <span className="mobile-designer">DDD</span>
+            </span>
+            ESIGNER
           </span>
         </div>
 

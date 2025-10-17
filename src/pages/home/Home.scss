@@ -5,17 +5,24 @@ $primary-color: #ff5933;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-top: 6rem;
+  margin-top: 2rem;
 
   .home__content {
     position: relative;
     display: flex;
-    width: fit-content;
+    width: 100%;
+    justify-content: center;
 
     .home__large-text {
-      font-size: 5rem;
+      font-size: 2.5rem;
       font-weight: bold;
-      margin-bottom: 2rem;
+      text-align: center;
+
+      .row {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
 
       .normal-text {
         font-size: 1rem;
@@ -27,7 +34,7 @@ $primary-color: #ff5933;
         background-color: $primary-color;
         align-items: center;
         justify-content: center;
-        padding: 0.5rem 2rem;
+        padding: 0.5rem 1.5rem;
         border-radius: 4rem;
         cursor: pointer;
 
@@ -41,23 +48,67 @@ $primary-color: #ff5933;
           animation: strike 0.2s ease-in-out;
         }
       }
+
+      .desktop-designer {
+        display: none;
+      }
+      .mobile-designer {
+        display: inline;
+      }
     }
 
     .home__shape {
-      width: 6rem;
-      height: 6rem;
+      width: 3.5rem;
+      height: 3.5rem;
     }
 
     .home__shape-1 {
       position: absolute;
-      right: 0;
-      bottom: 0;
+      right: 8.525rem;
+      bottom: 6.25rem;
     }
 
     .home__shape-2 {
       position: absolute;
-      right: 8rem;
-      bottom: 1rem;
+      left: 8rem;
+      bottom: 3rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .home {
+    margin-top: 6rem;
+
+    .home__content {
+      width: fit-content;
+
+      .home__large-text {
+        font-size: 5rem;
+        text-align: left;
+
+        .row {
+          flex-direction: row;
+        }
+
+        .desktop-designer {
+          display: inline;
+        }
+        .mobile-designer {
+          display: none;
+        }
+      }
+
+      .home__shape {
+        width: 6rem;
+        height: 6rem;
+      }
+
+      .home__shape-2 {
+        right: 8rem;
+        left: auto;
+        bottom: 1rem;
+      }
     }
   }
 }
