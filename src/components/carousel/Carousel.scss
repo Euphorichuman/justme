@@ -3,51 +3,22 @@ $gray-color: #3f3f3f;
 $primary-color: #ff5933;
 
 .carousel {
-  align-self: flex-end;
   display: flex;
-  gap: 2rem;
-  align-items: flex-start;
-  max-width: 96rem;
-  --slide-height: 19rem;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
   --slide-spacing: 1rem;
-  --slide-size: 26%;
+  --slide-size: 84%;
 
   .carousel__viewport {
     overflow: hidden;
     position: relative;
+    width: 100%;
 
-    // Left gradient
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 6rem;
-      height: 100%;
-      background: linear-gradient(
-        to right,
-        $black-color,
-        rgba(255, 255, 255, 0)
-      );
-      pointer-events: none;
-      z-index: 1;
-    }
-
-    // Right gradient
+    &::before,
     &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 6rem;
-      height: 100%;
-      background: linear-gradient(
-        to left,
-        $black-color,
-        rgba(255, 255, 255, 0)
-      );
-      pointer-events: none;
-      z-index: 1;
+      display: none;
     }
 
     .carousel__container {
@@ -69,5 +40,52 @@ $primary-color: #ff5933;
   .carousel__buttons {
     display: flex;
     gap: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .carousel {
+    flex-direction: row;
+    align-items: flex-start;
+    align-self: flex-end;
+    gap: 2rem;
+    max-width: 96rem;
+    --slide-size: 26%;
+
+    .carousel__viewport {
+      &::before {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 6rem;
+        height: 100%;
+        background: linear-gradient(
+          to right,
+          $black-color,
+          rgba(255, 255, 255, 0)
+        );
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 6rem;
+        height: 100%;
+        background: linear-gradient(
+          to left,
+          $black-color,
+          rgba(255, 255, 255, 0)
+        );
+        pointer-events: none;
+        z-index: 1;
+      }
+    }
   }
 }
