@@ -3,10 +3,11 @@ $primary-color: #ff5933;
 
 .skills {
   .skills__title {
-    font-size: 5rem;
+    font-size: 2.5rem;
     font-weight: bold;
     color: $primary-color;
     margin-bottom: 2rem;
+    text-align: center;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 
@@ -19,18 +20,25 @@ $primary-color: #ff5933;
   .skills__content {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
 
     .skills__content_section {
       display: flex;
-      gap: 2rem;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+
+      &:nth-of-type(2) {
+        flex-direction: column-reverse;
+      }
 
       .skills__content_section__info {
         display: flex;
         flex-direction: column;
+        text-align: center;
 
         .skills__content_section__info__title {
-          font-size: 1.5rem;
+          font-size: 1.25rem;
           font-weight: bold;
           margin-bottom: 1rem;
         }
@@ -45,15 +53,22 @@ $primary-color: #ff5933;
         display: flex;
         flex-direction: column;
         gap: 1rem;
+        width: 100%;
+        max-width: 350px;
 
         .skills__content_section__list__item {
           display: flex;
           align-items: center;
+          justify-content: space-between;
           gap: 1rem;
 
           .list__item__text {
-            width: max-content;
             cursor: pointer;
+          }
+
+          .list__item__text__number {
+            min-width: 1.5rem;
+            text-align: center;
           }
         }
       }
@@ -62,9 +77,53 @@ $primary-color: #ff5933;
 }
 
 .list__item__right {
-  justify-content: flex-end;
+  flex-direction: row-reverse;
 }
 
 .text-right {
-  text-align: right;
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .skills {
+    .skills__title {
+      font-size: 5rem;
+      text-align: left;
+    }
+
+    .skills__content {
+      gap: 1.5rem;
+
+      .skills__content_section {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 2rem;
+
+        &:nth-of-type(2) {
+          flex-direction: row;
+        }
+
+        .skills__content_section__info {
+          text-align: left;
+        }
+
+        .skills__content_section__list {
+          max-width: fit-content;
+
+          .skills__content_section__list__item {
+            justify-content: flex-start;
+          }
+        }
+      }
+    }
+  }
+
+  .list__item__right {
+    justify-content: flex-end !important;
+    flex-direction: row;
+  }
+
+  .text-right {
+    text-align: right;
+  }
 }

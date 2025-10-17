@@ -1,0 +1,14 @@
+$gray-color: #3f3f3f;
+$primary-color: #ff5933;
+
+.carousel__button {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    touch-action: manipulation;
+    text-decoration: none;
+}
+
+.carousel__button:disabled {
+  color: var(--detail-high-contrast);
+}

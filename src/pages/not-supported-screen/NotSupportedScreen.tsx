@@ -1,5 +1,3 @@
-import React from "react";
-
 import "./NotSupportedScreen.scss";
 
 export function NotSupportedScreen() {

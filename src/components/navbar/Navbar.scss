@@ -1,18 +1,66 @@
-$primary-color: #FF5933;
+$primary-color: #ff5933;
+$black-color: #050505;
+$breakpoint-tablet: 768px;
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; // Center title on mobile
+  align-items: center;
+  position: relative;
 
   .navbar__title {
     cursor: pointer;
-    display: flex;
-    align-items: center;
+    z-index: 101; // Ensure title is above the mobile menu
   }
 
-  .navbar__options {
+  // Mobile Menu Overlay
+  .navbar__menu {
     display: flex;
-    gap: 2rem;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    gap: 2rem;
+    background: $black-color;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    position: fixed; // This removes it from the layout flow
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%); // Hidden by default
+
+    &.is-active {
+      transform: translateX(0);
+    }
+
+    .navbar__options {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+      font-size: 1.5rem;
+    }
+  }
+
+  // Media query for tablets and larger screens
+  @media (min-width: $breakpoint-tablet) {
+    justify-content: space-between; // Revert for desktop layout
+
+    .navbar__menu {
+      position: static;
+      transform: none;
+      flex-direction: row;
+      height: auto;
+      width: auto;
+      background: transparent;
+      gap: 2rem;
+
+      .navbar__options {
+        flex-direction: row;
+        font-size: 1rem;
+      }
+    }
   }
 }

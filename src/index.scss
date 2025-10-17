@@ -60,7 +60,11 @@ body {
   background-color: $black-color;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 1.5rem 6rem;
+  margin: 1.5rem;
+
+  @media (min-width: 768px) {
+    margin: 1.5rem 6rem;
+  }
 }
 
 code {

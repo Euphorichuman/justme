@@ -9,18 +9,9 @@ export function Skills() {
     "CSS",
   ];
 
-  const skillsBackendWebDevelopment = [
-    "NodeJs",
-    "NestJs",
-    "Python",
-    ".NET",
-  ];
+  const skillsBackendWebDevelopment = ["NodeJs", "NestJs", "Python", ".NET"];
 
-  const skillsDesign = [
-    "Adobe Photoshop",
-    "Adobe Illustrator",
-    "Figma"
-  ];
+  const skillsDesign = ["Adobe Photoshop", "Adobe Illustrator", "Figma"];
 
   return (
     <div className="skills">
@@ -54,7 +45,7 @@ export function Skills() {
             ))}
           </div>
         </div>
-        
+
         <hr className="gray-line" />
 
         {/* BACKEND SKILLS */}
@@ -87,7 +78,7 @@ export function Skills() {
 
         <hr className="gray-line" />
 
-        {/* FRONTEND SKILLS */}
+        {/* DESIGN SKILLS */}
         <div className="skills__content_section">
           <div className="skills__content_section__info">
             <div className="skills__content_section__info__title">
