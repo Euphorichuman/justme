@@ -1,5 +1,5 @@
 import React from "react";
-import { CardCarousel } from "components/card-carousel/CardCarousel";
+import { Carousel } from "@/components/carousel/Carousel";
 
 import "./Projects.scss";
 
@@ -77,7 +77,7 @@ export function Projects({ refProp }: IProps) {
           WANNA SEE SOME OF <span className="work">MY WORK</span>?
         </div>
         <div className="projects__content">
-          <CardCarousel items={projects} />
+          <Carousel items={projects} />
         </div>
       </div>
     </section>
