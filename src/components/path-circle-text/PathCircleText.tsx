@@ -7,15 +7,19 @@ export function PathCircleText() {
   const svgRef = useRef<SVGSVGElement>(null);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-  }, []);
+    const handleScroll = () => {
+      const svg = svgRef.current;
+      if (svg) {
+        svg.style.transform = "rotate(" + window.pageYOffset / 2 + "deg)";
+      }
+    };
 
-  const handleScroll = () => {
-    const svg = svgRef.current;
-    if (svg) {
-      svg.style.transform = "rotate(" + window.pageYOffset / 2 + "deg)";
-    }
-  };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div className="path-circle-text">
