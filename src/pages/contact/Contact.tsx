@@ -51,7 +51,7 @@ export function Contact({ refProp }: IProps) {
         </a>
       </div>
 
-      <div className="contact__shape contact__shape-1">
+      <div className="contact__shape">
         <FlowerIcon />
       </div>
     </div>

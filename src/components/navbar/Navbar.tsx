@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./Navbar.scss";
 
+import FlowerIcon from "assets/shapes/flower.svg?react";
+
 interface IProps {
   scrollToSectionAction: (el: string) => void;
 }
@@ -15,6 +17,9 @@ export function Navbar({ scrollToSectionAction }: IProps) {
 
   return (
     <nav className="navbar">
+      <div className="navbar__shape">
+        <FlowerIcon />
+      </div>
       <div className="navbar__title" onClick={() => setIsMenuOpen(!isMenuOpen)}>
         Euphorichuman
       </div>

@@ -1,6 +1,7 @@
 $black-color: #050505;
 $gray-color: #3f3f3f;
 $primary-color: #ff5933;
+$md-breakpoint: 768px;
 
 @font-face {
   font-family: "MADE Outer Sans";
@@ -62,7 +63,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   margin: 1.5rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: $md-breakpoint) {
     margin: 1.5rem 6rem;
   }
 }
@@ -165,5 +166,15 @@ hr.gray-line {
   }
   to {
     text-decoration-color: currentColor;
+  }
+}
+
+// Animation for rotating shapes
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
