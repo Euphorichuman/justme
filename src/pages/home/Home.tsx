@@ -9,7 +9,7 @@ export function Home() {
         <div className="home__large-text">
           <span className="row">
             <span className="fake-btn normal-text">
-              Hi, my name is <span className="name">MARTIN FUENTES</span>, I'm
+              Hi, my name is MARTIN FUENTES, I'm
             </span>
             <span className="text-primary">FULL-STACK</span>
           </span>

@@ -32,23 +32,10 @@ $primary-color: #ff5933;
   }
 
   .contact__shape {
+    position: static;
     width: 8rem;
     height: 8rem;
     animation: rotate 3s linear infinite;
-  }
-
-  .contact__shape-1 {
-    position: static;
-    margin-top: 0;
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }
 
@@ -70,15 +57,11 @@ $primary-color: #ff5933;
     }
 
     .contact__shape {
-      width: 6rem;
-      height: 6rem;
-    }
-
-    .contact__shape-1 {
       position: absolute;
       left: 0;
-      bottom: -3.8rem;
-      margin-top: 0;
+      bottom: -4rem;
+      width: 6rem;
+      height: 6rem;
     }
   }
 }

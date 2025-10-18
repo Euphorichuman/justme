@@ -1,19 +1,27 @@
 $primary-color: #ff5933;
 $black-color: #050505;
-$breakpoint-tablet: 768px;
+$lg-breakpoint: 992px;
 
 .navbar {
   display: flex;
-  justify-content: center; // Center title on mobile
+  justify-content: center;
   align-items: center;
   position: relative;
 
-  .navbar__title {
-    cursor: pointer;
-    z-index: 101; // Ensure title is above the mobile menu
+  .navbar__shape {
+    position: absolute;
+    top: -5.5rem;
+    width: 8rem;
+    height: 8rem;
+    animation: rotate 3s linear infinite;
   }
 
-  // Mobile Menu Overlay
+  .navbar__title {
+    cursor: pointer;
+    z-index: 101;
+    font-size: 2rem;
+  }
+
   .navbar__menu {
     display: flex;
     flex-direction: column;
@@ -24,12 +32,12 @@ $breakpoint-tablet: 768px;
     height: 100vh;
     width: 100vw;
     text-align: center;
-    position: fixed; // This removes it from the layout flow
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
     transition: transform 0.3s ease-in-out;
-    transform: translateX(100%); // Hidden by default
+    transform: translateX(100%);
 
     &.is-active {
       transform: translateX(0);
@@ -43,10 +51,15 @@ $breakpoint-tablet: 768px;
       font-size: 1.5rem;
     }
   }
+}
 
-  // Media query for tablets and larger screens
-  @media (min-width: $breakpoint-tablet) {
-    justify-content: space-between; // Revert for desktop layout
+@media (min-width: $lg-breakpoint) {
+  .navbar {
+    justify-content: space-between;
+
+    .navbar__title {
+      font-size: 1rem;
+    }
 
     .navbar__menu {
       position: static;
