@@ -1,3 +1,6 @@
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import { Analytics } from "@vercel/analytics/react";
 import { Fragment, useRef } from "react";
 import { SpeedInsights } from "@vercel/speed-insights/react";

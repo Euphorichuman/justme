@@ -1,12 +1,12 @@
-import useEmblaCarousel from "embla-carousel-react";
+import { useRef } from "react";
+import Slider from "react-slick";
+
+import { Card } from "../card/Card";
 import {
   PrevButton,
   NextButton,
-  usePrevNextButtons,
-} from "./carousel-arrow-buttons";
-
+} from "./carousel-arrow-buttons/CarouselArrowButtons";
 import "./Carousel.scss";
-import { Card } from "../card/Card";
 
 interface IProps {
   items: {
@@ -18,31 +18,74 @@ interface IProps {
 }
 
 export function Carousel({ items }: IProps) {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const sliderRef = useRef<Slider | null>(null);
 
-  const {
-    prevBtnDisabled,
-    nextBtnDisabled,
-    onPrevButtonClick,
-    onNextButtonClick,
-  } = usePrevNextButtons(emblaApi);
+  const next = () => {
+    sliderRef.current?.slickNext();
+  };
+
+  const previous = () => {
+    sliderRef.current?.slickPrev();
+  };
+
+  const settings = {
+    arrows: false,
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1920,
+        settings: {
+          slidesToShow: 5,
+        },
+      },
+      {
+        breakpoint: 1800,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 840,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
 
   return (
     <section className="carousel">
       <div className="carousel__controls">
         <div className="carousel__buttons">
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+          <PrevButton onClick={previous} />
+          <NextButton onClick={next} />
         </div>
       </div>
-      <div className="carousel__viewport" ref={emblaRef}>
-        <div className="carousel__container">
+      <div className="slider-container">
+        <Slider ref={sliderRef} {...settings}>
           {items.map((item, index) => (
             <div className="carousel__slide" key={index}>
               <Card key={item.id} item={item} />
             </div>
           ))}
-        </div>
+        </Slider>
       </div>
     </section>
   );
