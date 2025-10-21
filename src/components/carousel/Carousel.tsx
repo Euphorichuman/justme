@@ -33,7 +33,7 @@ export function Carousel({ items }: IProps) {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 0,
     responsive: [
