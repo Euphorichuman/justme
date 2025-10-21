@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { useIsMobile } from "@/hooks/useIsMobile";
 import Slider from "react-slick";
 
 import { Card } from "../card/Card";
@@ -19,6 +20,7 @@ interface IProps {
 
 export function Carousel({ items }: IProps) {
   const sliderRef = useRef<Slider | null>(null);
+  const isMobile = useIsMobile();
 
   const next = () => {
     sliderRef.current?.slickNext();
@@ -33,7 +35,7 @@ export function Carousel({ items }: IProps) {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: isMobile ? 1 : 3,
     slidesToScroll: 1,
     initialSlide: 0,
     responsive: [
